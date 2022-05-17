@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<EShopAdminApp.Models.Order>
+<h2>Orders</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-md-1">
+                #
+            </th>
+            <th class="col">
+                Customer Details
+            </th>
+            <th class="col">
+                Number of products
+            </th>
+            <th class="col">
+              
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ 
+            var i = 1;
+            foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @(i++)
+                    </td>
+                    <td>
+                        @item.OrderBy.Username
+                    </td>
+                    <td>
+                        @item.Products.Count
+                    </td>
+                   <td>
+                       <a calss="btn btn-danger"
+                          href="/Order/GetOrderDetails/@item.Id">Details</a>
+                   </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
