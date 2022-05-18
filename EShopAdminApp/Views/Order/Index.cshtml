@@ -37,10 +37,13 @@
                     <td>
                         @item.Products.Count
                     </td>
-                   <td>
-                       <a calss="btn btn-danger"
-                          href="/Order/GetOrderDetails/@item.Id">Details</a>
-                   </td>
+                    <td>
+                        <a calss="btn btn-danger"
+                           href="/Order/GetOrderDetails/@item.Id">Details</a>
+                        <a calss="btn btn-info"
+                           href="/Order/SavePdf/@item.Id">Create invoice</a>
+                    </td>
+                    
                 </tr>
             }
         }
