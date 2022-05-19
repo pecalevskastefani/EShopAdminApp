@@ -5,6 +5,9 @@
 }
 @model List<EShopAdminApp.Models.Order>
 <h2>Orders</h2>
+<div class="row">
+    <a class="btn btn-outline-success" asp-controller="Order" asp-action="ExportAllOrders">Export  Orders</a>
+</div>
 <table class="table">
     <thead>
         <tr>
